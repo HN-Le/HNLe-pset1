@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hnle_pset1.MainActivity"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_weight="0.13"
+        app:srcCompat="@drawable/body" />
+
+    <CheckBox
+        android:id="@+id/shoes"
+        android:layout_width="195dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="195dp"
+        android:text="Shoes" />
+
+    <CheckBox
+        android:id="@+id/arms"
+        android:layout_width="195dp"
+        android:layout_height="40dp"
+        android:text="Arms" />
+
+    <CheckBox
+        android:id="@+id/eyes"
+        android:layout_width="195dp"
+        android:layout_height="40dp"
+        android:text="Eyes" />
+
+</LinearLayout>
