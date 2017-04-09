@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="3">
     android:orientation="vertical"
     tools:context="com.example.hnle_pset1.MainActivity"
     android:weightSum="1">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_weight="0.8">
 
-        <TextView
-            android:id="@+id/main_tittle"
-            android:layout_width="180dp"
-            android:layout_height="30dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:inputType="textPersonName"
-            android:text="@string/title"
-            android:textSize="20dp"
-            android:textColor="#000000"/>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_weight="0.8"
+        android:layout_column="0"
+        android:layout_row="2">
+
+
 
         <ImageView
             android:id="@+id/body"
@@ -117,24 +114,27 @@
             android:id="@+id/shoes"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_weight="0.8"
+            android:layout_weight="1"
             android:contentDescription="@string/shoes"
             android:visibility="invisible"
             app:srcCompat="@drawable/shoes"
+            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
 
     </RelativeLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:columnCount="2"
-        android:rowCount="6">
+        android:layout_width="537dp"
+        android:layout_height="255dp"
+        android:columnCount="6"
+        android:rowCount="8"
+        android:layout_column="1"
+        android:layout_row="2">
 
         <CheckBox
             android:id="@+id/checkbox_arms"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="1"
@@ -143,7 +143,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_eyes"
-            android:layout_width="195dp"
+            android:layout_width="115dp"
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="1"
@@ -152,7 +152,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_shoes"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="2"
@@ -161,7 +161,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_ears"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="2"
@@ -170,7 +170,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_eyebrows"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="3"
@@ -179,7 +179,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_glasses"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="3"
@@ -188,7 +188,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_hat"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="4"
@@ -197,7 +197,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_mouth"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="4"
@@ -206,7 +206,7 @@
 
         <CheckBox
             android:id="@+id/checkbox_mustachcio"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="5"
@@ -215,13 +215,29 @@
 
         <CheckBox
             android:id="@+id/checkbox_nose"
-            android:layout_width="195dp"
+            android:layout_width="180dp"
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="5"
             android:onClick="noseclicked"
             android:text="@string/checkbox_nose" />
+
+        <TextView
+            android:id="@+id/main_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="28dp"
+            android:inputType="textPersonName"
+            android:text="@string/title"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
     </GridLayout>
 
 
-</LinearLayout>
+</GridLayout>
