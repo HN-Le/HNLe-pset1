@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     public void armsclicked(View view) {
         View arms = findViewById(R.id.arms);
         if (arms.getVisibility() != VISIBLE)

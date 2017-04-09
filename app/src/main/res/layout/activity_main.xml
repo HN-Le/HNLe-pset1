@@ -10,8 +10,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="150dp"
         android:layout_weight="0.8">
+
+        <TextView
+            android:id="@+id/main_tittle"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:inputType="textPersonName"
+            android:text="@string/title"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
 
         <ImageView
             android:id="@+id/body"
@@ -106,18 +117,19 @@
             android:id="@+id/shoes"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_weight="1"
             android:contentDescription="@string/shoes"
             android:visibility="invisible"
-            app:srcCompat="@drawable/shoes"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            app:srcCompat="@drawable/shoes" />
+
 
     </RelativeLayout>
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:columnCount="2"
         android:rowCount="6">
 
@@ -127,8 +139,8 @@
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="1"
-            android:text="@string/checkbox_arms"
-            android:onClick="armsclicked"/>
+            android:onClick="armsclicked"
+            android:text="@string/checkbox_arms" />
 
         <CheckBox
             android:id="@+id/checkbox_eyes"
@@ -136,8 +148,8 @@
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="1"
-            android:text="@string/checkbox_eyes"
-            android:onClick="eyesclicked"/>
+            android:onClick="eyesclicked"
+            android:text="@string/checkbox_eyes" />
 
         <CheckBox
             android:id="@+id/checkbox_shoes"
@@ -145,8 +157,8 @@
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="2"
-            android:text="@string/checkbox_shoes"
-            android:onClick="shoesclicked"/>
+            android:onClick="shoesclicked"
+            android:text="@string/checkbox_shoes" />
 
         <CheckBox
             android:id="@+id/checkbox_ears"
@@ -154,8 +166,8 @@
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="2"
-            android:text="@string/checkbox_ears"
-            android:onClick="earsclicked"/>
+            android:onClick="earsclicked"
+            android:text="@string/checkbox_ears" />
 
         <CheckBox
             android:id="@+id/checkbox_eyebrows"
@@ -163,8 +175,8 @@
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="3"
-            android:text="@string/checkbox_eyebrows"
-            android:onClick="eyebrowsclicked"/>
+            android:onClick="eyebrowsclicked"
+            android:text="@string/checkbox_eyebrows" />
 
         <CheckBox
             android:id="@+id/checkbox_glasses"
@@ -172,8 +184,8 @@
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="3"
-            android:text="@string/checkbox_glasses"
-            android:onClick="glassesclicked"/>
+            android:onClick="glassesclicked"
+            android:text="@string/checkbox_glasses" />
 
         <CheckBox
             android:id="@+id/checkbox_hat"
@@ -181,8 +193,8 @@
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="4"
-            android:text="@string/checkbox_hat"
-            android:onClick="hatclicked"/>
+            android:onClick="hatclicked"
+            android:text="@string/checkbox_hat" />
 
         <CheckBox
             android:id="@+id/checkbox_mouth"
@@ -190,8 +202,8 @@
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="4"
-            android:text="@string/checkbox_mouth"
-            android:onClick="mouthclicked"/>
+            android:onClick="mouthclicked"
+            android:text="@string/checkbox_mouth" />
 
         <CheckBox
             android:id="@+id/checkbox_mustachcio"
@@ -199,8 +211,8 @@
             android:layout_height="30dp"
             android:layout_column="0"
             android:layout_row="5"
-            android:text="@string/checkbox_mustachcio"
-            android:onClick="mustachcioclicked"/>
+            android:onClick="mustachcioclicked"
+            android:text="@string/checkbox_mustachcio" />
 
         <CheckBox
             android:id="@+id/checkbox_nose"
@@ -208,10 +220,9 @@
             android:layout_height="30dp"
             android:layout_column="1"
             android:layout_row="5"
-            android:text="@string/checkbox_nose"
-            android:onClick="noseclicked"/>
+            android:onClick="noseclicked"
+            android:text="@string/checkbox_nose" />
     </GridLayout>
-
 
 
 </LinearLayout>
