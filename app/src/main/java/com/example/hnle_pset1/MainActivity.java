@@ -9,21 +9,76 @@ import static android.view.View.VISIBLE;
 import static com.example.hnle_pset1.R.drawable.arms;
 
 public class MainActivity extends AppCompatActivity {
+    // views, keys
+private View arms, eyes, ears, eyebrows, glasses, hat, mouth, mustachcio, nose, shoes;
+private String arms_save, eyes_save, ears_save, eyebrows_save, glasses_save, hat_save;
+private String mouth_save, mustachcio_save, nose_save, shoes_save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // views
+        arms = findViewById(R.id.arms);
+        eyes = findViewById(R.id.eyes);
+        shoes = findViewById(R.id.shoes);
+        eyebrows = findViewById(R.id.eyebrows);
+        ears = findViewById(R.id.ears);
+        glasses = findViewById(R.id.glasses);
+        hat = findViewById(R.id.hat);
+        mouth = findViewById(R.id.mouth);
+        nose = findViewById(R.id.nose);
+        mustachcio = findViewById(R.id.mustachcio);
+
+        if (savedInstanceState != null)
+        {
+            if (savedInstanceState.getInt("arms") == 0)
+                arms.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("eyes") == 0)
+                eyes.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("shoes") == 0)
+                shoes.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("eyebrows") == 0)
+                eyebrows.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("ears") == 0)
+                ears.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("glasses") == 0)
+                glasses.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("hat") == 0)
+                hat.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("mouth") == 0)
+                mouth.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("nose") == 0)
+                nose.setVisibility(View.VISIBLE);
+            if(savedInstanceState.getInt("mustachio") == 0)
+                mustachcio.setVisibility(View.VISIBLE);
+        }
+
+    }
+    @Override
+    protected void onSaveInstanceState (Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putInt("arms", arms.getVisibility());
+        outState.putInt("eyes", eyes.getVisibility());
+        outState.putInt("shoes", shoes.getVisibility());
+        outState.putInt("eyebrows", eyebrows.getVisibility());
+        outState.putInt("ears", ears.getVisibility());
+        outState.putInt("glasses", glasses.getVisibility());
+        outState.putInt("hat", hat.getVisibility());
+        outState.putInt("mouth", mouth.getVisibility());
+        outState.putInt("nose", nose.getVisibility());
+        outState.putInt("mustachio", mustachcio.getVisibility());
+
     }
 
     public void armsclicked(View view) {
+
         View arms = findViewById(R.id.arms);
-        if (arms.getVisibility() != VISIBLE)
-        {
+        if (arms.getVisibility() != VISIBLE) {
             arms.setVisibility(view.VISIBLE);
         }
-        else if (arms.getVisibility() == view.VISIBLE)
-        {
+        else if (arms.getVisibility() == view.VISIBLE) {
             arms.setVisibility(view.INVISIBLE);
         }
     }
